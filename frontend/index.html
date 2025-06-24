@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Магазин</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 id="company-name">Мой магазин</h1>
+    <p style="text-align: center; margin-top: 20px;">
+      <a href="/login.html">Администрирование</a>
+    </p>
+  </header>
+
+  <main>
+    <div id="product-list" class="product-list"></div>
+  </main>
+
+  <aside id="cart">
+    <h2>Корзина</h2>
+    <ul id="cartItems"></ul>
+    <p style="text-align: center; margin-top: 20px;"> <strong>Итого:</strong> <span id="total">0</span>₽</p>
+
+    <p style="text-align: center; margin-top: 20px;">
+      <button onclick="buyCart()">Купить всё</button>
+    </p>
+  </aside>
+
+  <footer>
+    <div id="contact-info"></div>
+  </footer>
+
+
+</body>
+</html>
+<script src="script.js"></script>
