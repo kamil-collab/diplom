@@ -17,7 +17,13 @@ from backend.models.models import Sale
 from datetime import datetime
 from flask import send_from_directory
 
+# Абсолютный путь до frontend
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+FRONTEND_DIR = os.path.abspath(os.path.join(BASE_DIR, "..", "frontend"))
+
+# Flask
+app = Flask(__name__, static_folder=os.path.join("..", "frontend"))
+CORS(app)
 
 app = Flask(__name__)
 CORS(app)
@@ -40,11 +46,11 @@ def get_client_info():
 
 @app.route("/")
 def index():
-    return send_file(os.path.join(BASE_DIR, "..", "frontend", "index.html"))
+    return send_from_directory(FRONTEND_DIR, "index.html")
 
 @app.route("/<path:path>")
 def static_files(path):
-    return send_file(os.path.join(BASE_DIR, "..", "frontend", path))
+    return send_from_directory(FRONTEND_DIR, path)
 
 @app.route("/analyze", methods=["POST"])
 def analyze():
