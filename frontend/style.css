@@ -77,10 +77,10 @@ button:disabled {
   gap: 20px;
 }
 .product-image {
-  width: 150px;   /* или 200px — выбери подходящий размер */
+  width: 150px;
   height: 150px;
-  object-fit: cover;  /* чтобы картинка красиво обрезалась под квадрат */
-  border-radius: 8px; /* необязательно — просто для красоты */
+  object-fit: cover;
+  border-radius: 8px;
   display: block;
-  margin: 0 auto; /* чтобы центрировать */
+  margin: 0 auto;
 }
